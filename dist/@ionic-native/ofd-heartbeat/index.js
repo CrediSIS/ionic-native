@@ -39,7 +39,7 @@ var OFDHeartbeat = (function (_super) {
         Plugin({
             pluginName: 'OFDHeartbeat',
             plugin: 'cordova-plugin-ofd-hearbeat',
-            pluginRef: 'OFDHeartbeat',
+            pluginRef: 'cordova.plugins.OFDHeartbeat',
             repo: 'https://github.com/credisis/cordova-plugin-ofd-heartbeat.git',
             platforms: ['Android'],
         })
