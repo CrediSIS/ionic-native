@@ -37,7 +37,7 @@ var OFDHeartbeat = (function (_super) {
         __metadata("design:returntype", Observable)
     ], OFDHeartbeat.prototype, "start", null);
     __decorate([
-        Cordova({ observable: true }),
+        Cordova({ observable: true, platforms: ['Android'] }),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Observable)
@@ -48,7 +48,7 @@ var OFDHeartbeat = (function (_super) {
             plugin: 'cordova-plugin-ofd-hearbeat',
             pluginRef: 'cordova.plugins.OFDHeartbeat',
             repo: 'https://github.com/credisis/cordova-plugin-ofd-heartbeat.git',
-            platforms: ['Android'],
+            platforms: ['Android', 'iOS']
         })
     ], OFDHeartbeat);
     return OFDHeartbeat;
