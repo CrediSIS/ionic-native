@@ -18,7 +18,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 var OFDHeartbeat = (function (_super) {
     __extends(OFDHeartbeat, _super);
@@ -31,22 +30,22 @@ var OFDHeartbeat = (function (_super) {
         { type: Injectable },
     ];
     __decorate([
-        Cordova({ observable: true }),
+        Cordova(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [String]),
-        __metadata("design:returntype", Observable)
+        __metadata("design:returntype", Promise)
     ], OFDHeartbeat.prototype, "start", null);
     __decorate([
-        Cordova({ observable: true, platforms: ['Android'] }),
+        Cordova(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", Observable)
+        __metadata("design:returntype", Promise)
     ], OFDHeartbeat.prototype, "sendLoginEvent", null);
     OFDHeartbeat = __decorate([
         Plugin({
             pluginName: 'OFDHeartbeat',
             plugin: 'cordova-plugin-ofd-hearbeat',
-            pluginRef: 'cordova.plugins.OFDHeartbeat',
+            pluginRef: 'window.OFDHeartbeat',
             repo: 'https://github.com/credisis/cordova-plugin-ofd-heartbeat.git',
             platforms: ['Android', 'iOS']
         })
