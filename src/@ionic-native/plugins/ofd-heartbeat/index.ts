@@ -9,6 +9,18 @@ export interface LoginEvent {
   userParam4: string;
 }
 
+export interface Info {
+  digest: string;
+  location: {
+    latitude: number;
+    longitude: number;
+    accuracy: number;
+    timestamp: number;
+  };
+  emulator: boolean;
+  isRoot: boolean;
+}
+
 @Plugin({
   pluginName: 'OFDHeartbeat',
   plugin: 'cordova-plugin-ofd-hearbeat',
@@ -23,4 +35,7 @@ export class OFDHeartbeat extends IonicNativePlugin {
 
   @Cordova()
   sendLoginEvent(params: LoginEvent): Promise<void> { return; }
+
+  @Cordova()
+  getInfo(): Promise<Info> { return; }
 }

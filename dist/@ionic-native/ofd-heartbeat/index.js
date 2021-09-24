@@ -26,6 +26,7 @@ var OFDHeartbeat = (function (_super) {
     }
     OFDHeartbeat.prototype.start = function (clientId) { return; };
     OFDHeartbeat.prototype.sendLoginEvent = function (params) { return; };
+    OFDHeartbeat.prototype.getInfo = function () { return; };
     OFDHeartbeat.decorators = [
         { type: Injectable },
     ];
@@ -41,6 +42,12 @@ var OFDHeartbeat = (function (_super) {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Promise)
     ], OFDHeartbeat.prototype, "sendLoginEvent", null);
+    __decorate([
+        Cordova(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", Promise)
+    ], OFDHeartbeat.prototype, "getInfo", null);
     OFDHeartbeat = __decorate([
         Plugin({
             pluginName: 'OFDHeartbeat',
